@@ -1,1 +1,12 @@
+**4/24/2025**
+*  **feedback.md is for instructor use only. DO NOT change the feedback.md**; make a copy if needed
+* class definition style & standards:  first, member vars  none per line and do not forget to initialize them;  second functions: separate group of functions  by a blank line; either matching setter/getter pairs or list all setters back to back and list all getters back to back; start with a default c’tor, followed by  copy c’tor (if any), then other c’tors in the order of increased number of arguments, d’tor- right after c’tor(s), overloaded functions- list them back to back in the order of increased number of arguments;  all accessor/getter functions should be const; all functions with more than one statement should be normal (defined externally, outside of the class and below main()), no inline functions with more than one statement; initialize all member variables to appropriate default values at the time of definition; all member variables must be private; classes must provide a strong exception guarantee; must have default c’tor; implement Rule of Three when necessary
+* poor Id(s)  and/or inconsistent naming convention; ids should be self-documenting and as short as possible; use verbs for functions and nouns for variables; use camel-casing for variables (errorMessage) enum & const should be in upper case with words separated by “_”, e.g., MAX_TERMS, PRINT_RECORDS; pointer variables should start with p( if single)  or pp( if double pointer); flags isValid ( clearly what true would mean); if copying – e.g rhsQueue or scrQueue ; do not use IDs that are same as or very similar to C++  keywords and functions; no need to call an array “array”- it is obvious -1
+```text
+  static size_t classObjectsCount;
+```
+* size_t is for holding the size of objects in memory, not unit count -1
+* 153  numerator ==0 is ok? -2
+* the job of FractionException class is to throw exceptions, not demo; see assignment 10
+* poor and redundant technique; all setter functions, including all c’tors’, should be calling setter function that sets all member variables (e.g., setAll()); it helps to avoid redundancy, promotes consistency, and ease of future modifications, call setAll() inside all other individual setter functions, including c’tor(s); this way validation and set statements are not all over the class code; you can make validator functions static so they can be called without an object; see assignment -10
 
